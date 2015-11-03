@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">ClownFiesta</string>
+    <string name="picture">Capture</string>
+    <string name="request_permission">We need your permission to use the camera.</string>
+    <string name="GPS">GPS coords</string>
+    <string name="action_settings">Settings</string>
+    <string name="camera_error">Camera Error!</string>
+    <string name="title_activity_login_sys">LoginSys</string>
+    <string name="email">E-mail</string>
+    <string name="password">Password</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="register">Register</string>
+    <string name="log_in_btn">Log in</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
