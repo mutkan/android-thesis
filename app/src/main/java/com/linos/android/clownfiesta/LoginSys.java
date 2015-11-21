@@ -2,6 +2,7 @@ package com.linos.android.clownfiesta;
 
 import android.app.Activity;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -26,12 +27,14 @@ public class LoginSys extends Activity{
     }
 
     public void EnableRegisterFragment(View view) {
-        RegisterFragment regFrag = RegisterFragment.newInstance("","");
+        Intent intent = new Intent(this,CameraActivity.class);
+        this.startActivity(intent);
+        /* RegisterFragment regFrag = RegisterFragment.newInstance("","");
         getFragmentManager()
                 .beginTransaction()
                 .replace(R.id.container, regFrag)
                         .addToBackStack(null)
                         .commit();
-
+        */
     }
 }
