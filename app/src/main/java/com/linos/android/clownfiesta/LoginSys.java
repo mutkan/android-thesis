@@ -29,6 +29,7 @@ public class LoginSys extends Activity{
     public void EnableRegisterFragment(View view) {
         Intent intent = new Intent(this,CameraActivity.class);
         this.startActivity(intent);
+
         /* RegisterFragment regFrag = RegisterFragment.newInstance("","");
         getFragmentManager()
                 .beginTransaction()
