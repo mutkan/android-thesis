@@ -14,8 +14,7 @@
         android:layout_height="wrap_content"
         android:maxLines="1"
         android:singleLine="true"
-        android:hint="@string/email"
-        android:inputType="textEmailAddress"
+        android:hint="@string/username"
         />
     <EditText
         android:id="@+id/password"
