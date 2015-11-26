@@ -16,7 +16,7 @@ public class EmailValidator {
         String text = editText.getText().toString().trim();
         editText.setError(null);
 
-        if(Pattern.matches(regex,text)){
+        if(!Pattern.matches(regex,text)){
             editText.setError(errorMsg);
             return false;
         }
@@ -28,6 +28,6 @@ public class EmailValidator {
             editText.setError("Required Field");
             return true;
         }else
-            return true;
+            return false;
     }
 }
