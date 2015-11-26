@@ -26,13 +26,8 @@
 
         </activity>
         <activity
-            android:name=".LoginActivity"
-            android:label="@string/title_activity_login"
-            android:windowSoftInputMode="adjustResize|stateVisible" >
-        </activity>
-        <activity
             android:name=".LoginSys"
-            android:label="@string/title_activity_login_sys" >
+            android:label="@string/title_activity_login_sys">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

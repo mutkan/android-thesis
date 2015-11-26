@@ -21,6 +21,17 @@
         android:scaleType="fitXY"
         android:src="@drawable/capture"
         />
+    <ImageButton
+        android:id="@+id/menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:scaleType="center"
+        android:src="@android:drawable/ic_dialog_dialer"
+        android:onClick="MenuBtn"
+        />
     <TextView
         android:id="@+id/GPS"
         android:layout_width="wrap_content"

@@ -1,10 +1,13 @@
 package com.linos.android.clownfiesta;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.IntentSender;
+import android.content.SharedPreferences;
 import android.location.Location;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -35,6 +38,11 @@ public class CameraActivity extends Activity  implements
     * A final tag for debugging
     * */
     private final String TAG ="CameraActivity";
+    /* Improve performance.We dont have to evaluate the token all the time */
+    @Override
+    public void onBackPressed(){
+        moveTaskToBack(true);
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,7 +69,19 @@ public class CameraActivity extends Activity  implements
                 .setFastestInterval(1 * 1000);
 
     }
+    public void MenuBtn(View view){
+        SharedPreferences prefs = getSharedPreferences("com.linos.android.clownfiesta",MODE_PRIVATE);
+        String token = prefs.getString("token", "Not Found");
+        if (!token.equals("Not Found")){
+            SharedPreferences.Editor editor = prefs.edit();
+            editor.remove("token");
+            editor.apply();
 
+            Intent intent = new Intent(this,LoginSys.class);
+            startActivity(intent);
+            finish();
+        }
+    }
     @Override
     protected void onResume(){
         super.onResume();
